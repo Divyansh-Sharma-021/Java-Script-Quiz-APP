@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Quiz App</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <header>
+    <h1>Web Dev Quiz</h1>
+    <button id="themeBtn">Dark Mode</button>
+  </header>
+
+  <main class="quiz-container">
+
+    <section id="startScreen">
+      <h2>Test Your Web Development Knowledge!</h2>
+      <p>There are 10 multiple-choice questions. You have 15 seconds for each question.</p>
+      <p class="best-score-box">Best Score: <span id="bestScoreText">0</span> / 10</p>
+      <button id="startBtn" class="main-btn">Start Quiz</button>
+    </section>
+
+    <section id="quizScreen" class="hide">
+      <div class="top-bar">
+        <span id="questionCounter">Question 1 of 10</span>
+        <span id="timerText">Time Left: 15s</span>
+      </div>
+
+      <div class="progress-bg">
+        <div id="progressBar"></div>
+      </div>
+
+      <h2 id="questionText">Question goes here?</h2>
+
+      <div id="optionsBox"></div>
+
+      <p id="feedbackText"></p>
+
+      <button id="nextBtn" class="main-btn" disabled>Next Question</button>
+    </section>
+
+    <section id="resultScreen" class="hide">
+      <h2>Quiz Completed!</h2>
+      <p id="finalScoreText"></p>
+      <p id="percentageText"></p>
+      <h3 id="messageText"></h3>
+
+      <button id="restartBtn" class="main-btn">Restart Quiz</button>
+
+      <h3>Review Your Answers:</h3>
+      <div id="reviewBox"></div>
+    </section>
+
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
